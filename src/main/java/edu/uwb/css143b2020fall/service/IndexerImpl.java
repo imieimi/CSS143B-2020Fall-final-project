@@ -2,10 +2,7 @@ package edu.uwb.css143b2020fall.service;
 
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Service
 public class IndexerImpl implements Indexer {
@@ -14,13 +11,15 @@ public class IndexerImpl implements Indexer {
 
         //my code starts here:
         List<List<Integer>> docNum = new ArrayList<>();
-
-        for(int i = 1; i < docs.size(); i++){
-            docNum.add(new ArrayList<>());
-            for(int b = 0; b < docs.get(i).length(); b++){
-                indexes.put(docs.get(b), docNum);
+        for(int i = 0; i < docs.size(); i++){
+            List<Integer> wordNum = new ArrayList<>();
+            for(int j = 0; j < docs.get(i).length(); j++){
+                wordNum.add(j);
+                indexes.put(docNum, docs.get(wordNum.size());
             }
+
         }
+
         return indexes;
     }
 }
