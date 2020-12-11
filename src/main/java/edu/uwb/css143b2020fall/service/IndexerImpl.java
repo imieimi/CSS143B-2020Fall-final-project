@@ -11,15 +11,18 @@ public class IndexerImpl implements Indexer {
 
         //my code starts here:
         List<List<Integer>> docNum = new ArrayList<>();
+        List<Integer> wordNum = new ArrayList<>();
         for(int i = 0; i < docs.size(); i++){
-            List<Integer> wordNum = new ArrayList<>();
+            docNum.add(i);
             for(int j = 0; j < docs.get(i).length(); j++){
                 wordNum.add(j);
-                indexes.put(docNum, docs.get(wordNum.size());
             }
 
+        for(int a = 0; a < docNum.size(); a++){
+            for(int b  = 0; b < wordNum.size(); b++){
+                indexes.put(docs.get(b), docNum);
+            }
         }
-
         return indexes;
     }
 }
