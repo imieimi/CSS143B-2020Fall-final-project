@@ -16,11 +16,9 @@ public class IndexerImpl implements Indexer {
         List<List<Integer>> docNum = new ArrayList<>();
 
         for(int i = 1; i < docs.size(); i++){
+            docNum.add(new ArrayList<>());
             for(int b = 0; b < docs.get(i).length(); b++){
-                docNum.get(i).add(b);
-            }
-            for(int c = 0; c < docNum.get(i).size(); c++){
-                indexes.put(docs.get(c), docNum);
+                indexes.put(docs.get(b), docNum);
             }
         }
         return indexes;
